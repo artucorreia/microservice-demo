@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS accounts (
+  customer_id int NOT NULL,
+  account_number int PRIMARY KEY,
+  account_type varchar(100) NOT NULL,
+  branch_address varchar(200) NOT NULL,
+  created_at timestamp NOT NULL,
+  created_by varchar(20) NOT NULL,
+  updated_at timestamp DEFAULT NULL,
+  updated_by varchar(20) DEFAULT NULL
+);

@@ -1,0 +1,34 @@
+services:
+  # accounts_ms
+  accounts_db:
+    image: postgres:17-alpine
+    container_name: accounts_db
+    ports:
+      - 2345:5432
+    environment:
+      - POSTGRES_USER=developer
+      - POSTGRES_PASSWORD=01092209
+      - POSTGRES_DB=accounts_db
+    restart: on-failure:2
+
+  # loans_ms
+  loans_db:
+    image: postgres:17-alpine
+    container_name: loans_db
+    ports:
+      - 2355:5432
+    environment:
+      - POSTGRES_USER=developer
+      - POSTGRES_PASSWORD=01092209
+      - POSTGRES_DB=loans_db
+    restart: on-failure:2
+
+  # card_ms
+  # cards_db:
+  #   image: postgres:17-alpine
+  #   container_name: cards_db
+  #   ports:
+  #     - 2365:5432
+  #   env_file:
+  #     - ./db.env
+  #   restart: on-failure:2
