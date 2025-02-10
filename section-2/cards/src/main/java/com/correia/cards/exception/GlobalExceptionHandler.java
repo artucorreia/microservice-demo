@@ -1,4 +1,4 @@
-package com.correia.loans.exception;
+package com.correia.cards.exception;
 
 import java.time.LocalDateTime;
 import java.util.HashMap;
@@ -60,8 +60,8 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
     return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
   }
 
-  @ExceptionHandler(LoanAlreadyExistisException.class)
-  public final ResponseEntity<ExceptionResponse> handleLoanAlreadyExistsExceptions(Exception exception,
+  @ExceptionHandler(CardAlreadyExistisException.class)
+  public final ResponseEntity<ExceptionResponse> handleCardAlreadyExistsExceptions(Exception exception,
       WebRequest request) {
     ExceptionResponse response = new ExceptionResponse.Builder()
         .status(HttpStatus.BAD_REQUEST)
