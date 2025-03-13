@@ -1,0 +1,62 @@
+/home/artu/github/microservice-demo/section-2/accounts/src/main/java/com/correia/accounts
+├── AccountsApplication.java
+├── application
+│   ├── gateways
+│   │   └── AccountGateway.java
+│   ├── interactors
+│   │   ├── CreateAccountInteractor.java
+│   │   ├── DeleteAccountInteractor.java
+│   │   ├── FindAccountByCustomerIdInteractor.java
+│   │   ├── FindCustomerByPhoneNumberInteractor.java
+│   │   └── UpdateAccountInteractor.java
+│   └── usecases
+│       ├── CreateAccountUseCase.java
+│       ├── DeleteAccountUseCase.java
+│       ├── FindAccountByCustomerIdUseCase.java
+│       ├── FindCustomerByPhoneNumberUseCase.java
+│       └── UpdateAccountUseCase.java
+├── config
+│   ├── AccountConfig.java
+│   └── AuditorAwareConfig.java
+├── domain
+│   ├── entity
+│   │   ├── Account.java
+│   │   ├── Base.java
+│   │   └── Customer.java
+│   └── exception
+│       ├── ArgumentNotValidExceptionResponse.java
+│       ├── CustomerAlreadyExistsException.java
+│       ├── ExceptionResponse.java
+│       └── ResourceNotFoundException.java
+└── infra
+    ├── controller
+    │   ├── AccountsController.java
+    │   ├── constant
+    │   │   └── AccountConstant.java
+    │   ├── dto
+    │   │   ├── request
+    │   │   │   ├── CreateCustomerDTO.java
+    │   │   │   └── UpdateCustomerDTO.java
+    │   │   └── response
+    │   │       ├── AccountDTO.java
+    │   │       ├── CustomerDetailsDTO.java
+    │   │       └── ResponseDTO.java
+    │   ├── handle
+    │   │   └── GlobalExceptionHandler.java
+    │   └── mapper
+    │       ├── AccountMapper.java
+    │       └── CustomerMapper.java
+    ├── gateways
+    │   ├── AccountJpaRepositoryGateway.java
+    │   └── mapper
+    │       ├── AccountMapperGateway.java
+    │       └── CustomerMapperGateway.java
+    └── persistence
+        ├── AccountEntity.java
+        ├── AccountRepository.java
+        ├── AuditorAwareImpl.java
+        ├── BaseEntity.java
+        ├── CustomerEntity.java
+        └── CustomerRepository.java
+
+20 directories, 40 files

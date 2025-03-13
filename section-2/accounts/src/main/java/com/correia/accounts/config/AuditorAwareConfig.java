@@ -1,11 +1,11 @@
 package com.correia.accounts.config;
 
-import com.correia.accounts.audit.AuditorAwareImpl;
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 import org.springframework.stereotype.Component;
+
+import com.correia.accounts.infra.persistence.AuditorAwareImpl;
 
 @Component
 @EnableJpaAuditing
